@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# specify resources
+
+# max wallclock time
+#SBATCH --time=4:00:00
+
+# jobname
+#SBATCH --job-name=seq15_equil
+
+# queue
+#SBATCH --partition=qr6
+#SBATCH --gpus=1
+source /export/home/WG-ayan/programs/GROMACS/gromacs_2022.4_QR6/bin/GMXRC
+
+make

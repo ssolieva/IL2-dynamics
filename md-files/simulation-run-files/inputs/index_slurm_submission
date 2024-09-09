@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# specify resources
+
+# max wallclock time
+#SBATCH --time=0:10:00
+
+# jobname
+#SBATCH --job-name=1m47_ind
+
+# queue
+#SBATCH --partition=p100
+#SBATCH --gpus=1
+source /export/home/WG-ayan/programs/GROMACS/gromacs_2022.4_P100/bin/GMXRC
+echo '1 q' | gmx make_ndx -f *-start.gro -o index.ndx

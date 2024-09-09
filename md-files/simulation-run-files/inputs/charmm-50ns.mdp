@@ -1,0 +1,51 @@
+integrator              = md
+dt                      = 0.002
+; output control
+nsteps                  = 25000000 ; 50 ns
+nstxout                 = 0
+nstvout                 = 0
+nstfout                 = 0 
+nstxtcout               = 10000
+nstcalcenergy           = 100
+nstenergy               = 10000
+nstlog                  = 10000
+
+; vdw / electrostatics
+cutoff-scheme           = Verlet
+nstlist                 = 40
+rlist                   = 1.2
+coulombtype             = pme
+rcoulomb                = 1.2
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw_switch             = 1.0
+rvdw                    = 1.2
+DispCorr                = no
+
+; temperature control
+tcoupl                  = v-rescale             ; will survey canonical ensemble -stochastic v-rescale
+tc_grps                 = Protein Non-protein
+tau_t                   = 1.0 1.0
+ref_t                   = 310 310 
+; Pressure control
+pcoupl                  = Parrinello-Rahman
+pcoupltype              = isotropic
+nstpcouple              = 10
+tau_p                   = 1.0
+compressibility         = 4.5e-5  
+ref_p                   = 1.01325   ; 1 atm 
+;
+; Bond parameters
+constraint_algorithm    = lincs     ; holonomic constraints 
+constraints             = h-bonds   ; bonds involving H are constrained
+lincs_iter              = 1         ; accuracy of LINCS
+lincs_order             = 4         ; also related to accuracy. 6 for > 2 fs timesteps
+;continuation           = yes
+gen_vel			= yes
+gen_temp                = 310       ; 310 kelvin
+;
+nstcomm                 = 100
+comm_mode               = linear
+comm_grps               = SYSTEM
+;
+refcoord_scaling        = com

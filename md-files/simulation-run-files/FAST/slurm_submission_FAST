@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# jobname
+#SBATCH --job-name=fast-seq15-il2
+
+# queue
+#SBATCH --partition=amdcpu
+#SBATCH --ntasks=1
+
+python run-fast-alt.py
