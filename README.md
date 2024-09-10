@@ -8,3 +8,7 @@
 			|--- 7ra9_c123s_seq1-prot-masses.pdb  | Seq1 starting structure
 			|--- seq1_L56A-prot-masses.pdb        | Seq1 L56A starting structure
 			|--- seq1_V84A-prot-masses.pdb        | Seq1 V84A starting structure
+
+## analysis-files
+	--- tica | all files related to tica
+	--- cards | all files related to cards
