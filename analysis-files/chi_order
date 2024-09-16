@@ -1,0 +1,28 @@
+
+######## concatenate, calculate chi order params, plot in jupyter (separately)
+
+gmx trjcat -f *.xtc -o 1m47_all_traj.xtc -cat yes
+
+gmx chi -s ../wt_prot_masses.pdb  -f 1m47_all_traj.xtc -o 1m47_chi_order.xvg -maxchi 3
+
+
+###
+
+
+gmx trjcat -f *.xtc -o seq1_all_traj.xtc -cat yes
+
+gmx chi -s ../seq1_prot_masses.pdb  -f seq1_all_traj.xtc -o seq1_chi_order.xvg -maxchi 3
+
+
+###
+
+gmx trjcat -f *.xtc -o seq15_all_traj.xtc -cat yes
+
+gmx chi -s ../seq15_prot_masses.pdb  -f seq15_all_traj.xtc -o seq15_chi_order.xvg -maxchi 3
+
+
+###
+
+gmx trjcat -f *.xtc -o seq1_all_traj_new.xtc -cat yes
+
+gmx chi -s ../../seq1_c123s-prot-masses.pdb  -f seq1_all_traj_new.xtc -o seq1_chi_order_new.xvg -maxchi 3
