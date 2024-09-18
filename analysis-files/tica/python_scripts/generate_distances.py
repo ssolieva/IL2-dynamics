@@ -38,7 +38,8 @@ V_WT_S15_resin = '91 93'
 IL_S1_resin =     '12 14 17 18 19 21 24 25 36 40 53 59 63 66 70 87 92 94 112 116 120 126 127 130'
 V_S1_resin = '89 91'
 
-generate_distances( '1m47_c125', IL_WT_S15_resin, V_WT_S15_resin, save_path, directory_path)
-generate_distances('seq15_c125', IL_WT_S15_resin, V_WT_S15_resin, save_path, directory_path)
-generate_distances( 'seq1_c123', IL_S1_resin, V_S1_resin, save_path, directory_path)
-
+generate_distances( '1m47_c125s', IL_WT_S15_resin, V_WT_S15_resin, save_path, directory_path)
+generate_distances('seq15_c125s', IL_WT_S15_resin, V_WT_S15_resin, save_path, directory_path)
+generate_distances( 'seq1_c123s', IL_S1_resin, V_S1_resin, save_path, directory_path)
+generate_distances( 'seq1_c123s_L56A', IL_S1_resin, V_S1_resin, save_path, directory_path)
+generate_distances( 'seq1_c123s_V84A', IL_S1_resin, V_S1_resin, save_path, directory_path)
